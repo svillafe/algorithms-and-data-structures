@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Best case running time:  O(n) 
  * Average Case Running Time: O(n)
  * Worst case running time: О(n)
- * Extra Space Complexity: O(k)
+ * Extra Space Complexity: O(k + 1)
  * Stable: Yes
  * In-Place: No
  * Extra notes: It assumes that each of the n input is an integer in the range 0 to k.

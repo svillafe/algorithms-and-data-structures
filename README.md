@@ -8,8 +8,9 @@ Below you will find the list of algorithms implemented from scratch:
 ### Sorting ###
 
 * Bubble Sort
-* Merge Sort
 * Counting Sort
+* Merge Sort
+* Radix Sort
 
 
 
