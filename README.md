@@ -9,6 +9,7 @@ Below you will find the list of algorithms implemented from scratch:
 
 * Bubble Sort
 * Merge Sort
+* Counting Sort
 
 
 
