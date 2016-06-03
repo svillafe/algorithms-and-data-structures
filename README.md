@@ -11,6 +11,7 @@ Below you will find the list of algorithms implemented from scratch:
 * Counting Sort
 * Merge Sort
 * Radix Sort
+* Selection Sort
 
 
 
