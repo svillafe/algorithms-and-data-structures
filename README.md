@@ -13,5 +13,9 @@ Below you will find the list of algorithms implemented from scratch:
 * Radix Sort
 * Selection Sort
 
+### Data Structures ###
+
+* Simple Node (Implementation of Node)
+
 
 
