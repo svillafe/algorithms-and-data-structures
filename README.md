@@ -19,6 +19,10 @@ Below you will find the list of algorithms implemented from scratch:
 * Direct Address Hash Table
 * Open Addressing Hash Table
 * Universal Hashing Hash Table
+* Binary Search Tree
+* Binary Tree Node
+* LCRS Tree (Left Child Right Sibling)
+* LCRS Node (Left Child Right Sibling)
 
 
 
