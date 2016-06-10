@@ -15,6 +15,7 @@ Below you will find the list of algorithms implemented from scratch:
 
 ### Data Structures ###
 
+* Stack
 * Simple Node (Implementation of Node)
 * Direct Address Hash Table
 * Open Addressing Hash Table
