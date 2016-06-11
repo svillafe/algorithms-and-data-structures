@@ -11,7 +11,7 @@ import dataStructures.stack.Stack;
  * in a binary search tree. If y is a node in the left subtree of x, the y .key <= x.key. 
  * If y is a node in the right subtree of x, then y.key >= x.key.
  * 
- * Source CLRS page 287
+ * Source: CLRS page 287
  */
 public class BinarySearchTree<T extends Comparable<T>, U> {
 	
@@ -24,16 +24,46 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		this.amountOfNodes = 0;
 	}
 	
+	/*
+	 * Method: insert
+	 * It insert a new element iteratively.
+	 */
 	public void insert(T key, U data){
+		
+		BinaryTreeNode<T, U> parent  = null;
+		BinaryTreeNode<T, U> node    = this.root;
+		BinaryTreeNode<T, U> newNode = new BinaryTreeNode<T, U>(key, data);
+		
 		this.amountOfNodes++;
 		
+		while(node != null){
+			parent = node;
+			if(newNode.getKey().compareTo(node.getKey()) < 0){
+				node = node.getLeft();
+			}else{
+				node = node.getRight();
+			}
+		}
+		
+		newNode.setParent(parent);
+		
+		if(parent == null){ //It is the first element of the tree.
+			this.root = newNode;
+		}else if(newNode.getKey().compareTo(parent.getKey()) < 0){
+			parent.setLeft(newNode);
+		}else{
+			parent.setRight(newNode);
+		}
+	}
+
+	public void insertRecursively(T key, U data){
 		if(this.root == null){
 			this.root = new BinaryTreeNode<T, U>(key, data);
 		}else{
 			insertIntoTree(this.root, new BinaryTreeNode<T,U>(key, data));
 		}
 	}
-
+	
 	private void insertIntoTree(BinaryTreeNode<T, U> node, BinaryTreeNode<T, U> newNode) {
 		if(newNode.getKey().compareTo(node.getKey()) < 0){
 			if(node.getLeft() == null){
@@ -85,18 +115,6 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		return node;
 	}
 	
-	public BinaryTreeNode<T, U> findMaximumIteratively() {
-		BinaryTreeNode<T, U> node = this.root;		
-		if(node == null){
-			return null;
-		}
-		
-		while(node.getRight() != null){
-			node = node.getRight();
-		}
-		return node;
-	}
-	
 	public BinaryTreeNode<T, U> findMaximumRecursively() {
 		if(this.root == null){
 			return null;
@@ -114,17 +132,18 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		}
 	}
 	
-	public BinaryTreeNode<T, U> findMinimumIteratively() {
+	public BinaryTreeNode<T, U> findMaximumIteratively() {
 		BinaryTreeNode<T, U> node = this.root;		
 		if(node == null){
 			return null;
 		}
 		
-		while(node.getLeft() != null){
-			node = node.getLeft();
+		while(node.getRight() != null){
+			node = node.getRight();
 		}
 		return node;
 	}
+	
 	
 	public BinaryTreeNode<T, U> findMinimumRecursively() {
 		if(this.root == null){
@@ -141,6 +160,18 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		}else{
 			return findMinimumRecursively(node.getLeft());
 		}
+	}
+	
+	public BinaryTreeNode<T, U> findMinimumIteratively() {
+		BinaryTreeNode<T, U> node = this.root;		
+		if(node == null){
+			return null;
+		}
+		
+		while(node.getLeft() != null){
+			node = node.getLeft();
+		}
+		return node;
 	}
 
 	public void printIterable(){
@@ -231,6 +262,113 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		index++;
 		resp[index] = node.getKey();
 		return index;
+	}
+	
+	/*
+	 * Method: successor
+	 * Description: If the right subtree of a node x in T is empty and x has a successor 
+	 * y, then y is the lowest ancestor of x whose left child is also an ancestor of x. 
+	 * Every node is its own ancestor.
+	 * 
+	 */
+	public BinaryTreeNode<T, U> successor(BinaryTreeNode<T, U> node){
+		BinaryTreeNode<T, U> parent = null;
+		
+		if(node.getRight() != null){
+			return this.findMinimumRecursively(node.getRight());
+		}
+		
+		parent = node.getParent();
+		
+		while(parent != null && node.getKey() == parent.getRight().getKey()){
+			node = parent;
+			parent = node.getParent();
+		}
+		
+		return parent;
+	}
+	
+	/* 
+	 * Method: predecessor
+	 * Description : If the left subtree of a node x in T is empty and x has a predecessor y, 
+	 * then y is the lowest ancestor of x whose right child is also an ancestor of x. Every
+	 * node is its own ancestor. 
+	 * 
+	 */
+	public BinaryTreeNode<T, U> predecessor(BinaryTreeNode<T, U> node){
+		BinaryTreeNode<T, U> parent = null;
+		
+		if(node.getLeft() != null){
+			return this.findMaximumRecursively(node.getLeft());
+		}
+		
+		parent = node.getParent();
+		
+		while(parent != null && node.getKey() == parent.getLeft().getKey()){
+			node = parent;
+			parent = node.getParent();
+		}
+		
+		return parent;
+	}
+	
+	/*
+	 * Method: Transplant
+	 * Description: It helps to move subtrees around within the binary search tree by
+	 * replacing one subtree as a child of its parent with another subtree.
+	 *  It replace the subtree rooted at node rootA with the subtree rooted at node 
+	 *  rootB.
+	 *  
+	 *  Source: CLRS page 296
+	 */
+	private void transplant(BinaryTreeNode<T, U> rootA, BinaryTreeNode<T, U> rootB){
+		if(rootA.getParent() == null){
+			this.root = rootB;
+		}else if(rootA == rootA.getParent().getLeft()){
+			rootA.getParent().setLeft(rootB);
+		}else{
+			rootA.getParent().setRight(rootB);
+		}
+		
+		if(rootB != null){
+			rootB.setParent(rootA.getParent());
+		}
+	}
+	
+	/*
+	 * Method: Delete
+	 * Description: In order to delete a node there are several cases to bear
+	 * in mind: 
+	 * 		* If z (node to be deleted) has no left child, then we replace z by
+	 * 		its right child.
+	 * 		* If z has just one child, which is its left child, then we replace
+	 * 		z by its left child.
+	 * 		* Otherwise, z has both a left and right child. We find z's successor
+	 * 		which lies in z's right subtree and has no left child.
+	 * 			- If the minimum is z's right child, then we replace z by the minimum
+	 * 			leaving minimum's right child alone.
+	 * 			- Otherwise, the minimum lies within the z's right subtree but is not
+	 * 			z's right child. Thus, we first replace the minimum by its own right 
+	 * 			child, and then we replace z by the minimum.
+	 * 
+	 * Source: CLRS page 296.
+	 */
+	public void delete(BinaryTreeNode<T, U> node){
+		if(node.getLeft() == null){
+			this.transplant(node, node.getRight());
+		}else if(node.getRight() == null){
+			this.transplant(node, node.getLeft());
+		}else{
+			BinaryTreeNode<T, U> minimum = this.findMinimumRecursively(node.getRight());
+			if(minimum.getParent() != node){
+				this.transplant(minimum, minimum.getRight());
+				minimum.setRight(node.getRight());
+				minimum.getRight().setParent(minimum);
+			}
+			this.transplant(node, minimum);
+			minimum.setLeft(node.getLeft());
+			minimum.getLeft().setParent(minimum);
+		}
 	}
 
 }
