@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /*
  * Problem: Sort the input array
- * Algorithm: MergeSort
+ * Algorithm: Merge Sort
  * Type: Comparison Sort
  * Best Case Running Time: O(n log n)
  * Average Case Running Time: O(n log n)

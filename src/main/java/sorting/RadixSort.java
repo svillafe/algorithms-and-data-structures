@@ -2,7 +2,7 @@ package sorting;
 
 /*
  * Problem: Sort the input array
- * Algorithm: RadixSort
+ * Algorithm: Radix Sort
  * Best case running time:  O(n)
  * Average Case Running Time: O(n)
  * Worst case running time: О(n)

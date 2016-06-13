@@ -4,7 +4,7 @@ import utils.UtilsFunctions;
 
 /*
  * Problem: Sort the input array
- * Algorithm: BubbleSort
+ * Algorithm: Bubble Sort
  * Type: Comparison Sort
  * Best case running time:  O(n) [When the input array is already sorted]
  * Average Case Running Time: O(n^2)

@@ -35,4 +35,9 @@ public class SimpleNode<K extends Comparable<K>, D> implements Node<K, D> {
 		this.data = data;
 	}
 
+	@Override
+	public String toString() {
+		return "SimpleNode [key=" + key + ", data=" + data + "]";
+	}
+
 }
