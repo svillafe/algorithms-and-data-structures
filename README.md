@@ -26,6 +26,8 @@ Below you will find the list of algorithms implemented from scratch:
 * Binary Tree Node
 * LCRS Tree (Left Child Right Sibling)
 * LCRS Node (Left Child Right Sibling)
+* Doubly Node
+* Doubly Sorted Linked List
 
 
 
