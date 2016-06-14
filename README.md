@@ -28,6 +28,7 @@ Below you will find the list of algorithms implemented from scratch:
 * LCRS Node (Left Child Right Sibling)
 * Doubly Node
 * Doubly Sorted Linked List
+* Doubly Unsorted Linked List
 
 
 
