@@ -7,6 +7,16 @@
   <artifactId>algorithms</artifactId> 
   <version>1.0</version>
   <name>algorithms-and-datastructures</name>
+  <build>
+  	<plugins>
+  		<plugin>
+    		<groupId>org.eluder.coveralls</groupId>
+    		<artifactId>coveralls-maven-plugin</artifactId>
+    		<version>4.2.0</version>
+		</plugin>
+  	</plugins>
+  </build>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,4 +25,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  
 </project>
