@@ -14,6 +14,7 @@ Below you will find the list of algorithms implemented from scratch:
 * Merge Sort
 * Radix Sort
 * Selection Sort
+* Insertion Sort
 
 ### Data Structures ###
 
