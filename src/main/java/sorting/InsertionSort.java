@@ -21,12 +21,6 @@ import dataStructures.linkedList.LinkedListNode;
 
 public class InsertionSort {
 	
-	public static void main(String [] args){
-		Integer array[] = new Integer[]{89, 74, 105, 43, 47, 52, 135, 125, 96, 41, 2, 150, 97, 92, 18, 3};
-		sort(array);
-		System.out.println(Arrays.toString(array));
-	}
-	
 	public static<T extends Comparable<T>> void sort(T[] array){
 		
 		for(int i = 1 ; i < array.length ; i++){
