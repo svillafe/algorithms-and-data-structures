@@ -30,6 +30,7 @@ Below you will find the list of algorithms implemented from scratch:
 * Doubly Node
 * Doubly Sorted Linked List
 * Doubly Unsorted Linked List
+* Adjacency Matrix Graph
 
 ### Dynamic Programming ###
 * Fibonacci Numbers

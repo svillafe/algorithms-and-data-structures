@@ -8,7 +8,8 @@ import org.junit.Test;
 import dataStructures.linkedList.DoublyNode;
 
 public class DoublyNodeTest {
-private DoublyNode<Integer, String> doublyNode = null;
+	
+	private DoublyNode<Integer, String> doublyNode = null;
 	
 	@Before
 	public void setUp() {
@@ -29,5 +30,12 @@ private DoublyNode<Integer, String> doublyNode = null;
 	public void itShouldInitializeThePointerWithNull(){
 		assertEquals(null, this.doublyNode.getPrev());
 		assertEquals(null, this.doublyNode.getNext());
+	}
+	
+	@Test
+	public void itShouldBeEqualsToAnotherNodesWithSameValues(){
+		DoublyNode<Integer, String> doublyNode2 = new DoublyNode<Integer, String>(5, "Hello World");
+		assertEquals(true, doublyNode2.equals(this.doublyNode));
+		assertEquals(false, doublyNode2 == this.doublyNode);
 	}
 }
