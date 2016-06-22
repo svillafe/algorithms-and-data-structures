@@ -9,7 +9,7 @@ Below you will find the list of algorithms implemented from scratch:
 
 ### Sorting ###
 
-* Bubble Sort
+* [Bubble Sort](/src/main/java/sorting/BubbleSort.java)
 * Counting Sort
 * Merge Sort
 * Radix Sort
