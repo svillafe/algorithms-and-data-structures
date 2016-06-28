@@ -10,11 +10,11 @@ Below you will find the list of algorithms implemented from scratch:
 ### Sorting ###
 
 * [Bubble Sort](/src/main/java/sorting/BubbleSort.java)
-* Counting Sort
-* Merge Sort
-* Radix Sort
-* Selection Sort
-* Insertion Sort
+* [Counting Sort](/src/main/java/sorting/CountingSort.java)
+* [Merge Sort](/src/main/java/sorting/MergeSort.java)
+* [Radix Sort](/src/main/java/sorting/RadixSort.java)
+* [Selection Sort](/src/main/java/sorting/SelectionSort.java)
+* [Insertion Sort](/src/main/java/sorting/InsertionSort.java)
 
 ### Data Structures ###
 
