@@ -22,20 +22,22 @@ Below you will find the list of algorithms implemented from scratch:
 * [Array Stack](/src/main/java/dataStructures/stack/ArrayStack.java)
 * [Node](/src/main/java/dataStructures/Node.java) (Interface)
 * [Simple Node](/src/main/java/dataStructures/SimpleNode.java)
-* [Direct Address Hash Table](/src/main/java/hashTable/DirectAddressingHashTable.java)
-* [Open Addressing Hash Table](/src/main/java/hashTable/OpenAddressingHashTable.java)
+* [Direct Address Hash Table](/src/main/java/dataStructures/hashTable/DirectAddressHashTable.java)
+* [Open Addressing Hash Table](/src/main/java/dataStructures/hashTable/OpenAddressingHashTable.java)
 * [Universal Hashing Hash Table](/src/main/java/hashTable/UniversalHashingHashTable.java)
-* [Binary Search Tree]
-* [Binary Tree Node]
-* [LCRS Tree] (Left Child Right Sibling)
-* [LCRS Node] (Left Child Right Sibling)
-* [Doubly Node]
-* [Doubly Sorted Linked List]
-* [Doubly Unsorted Linked List]
-* [Adjacency Matrix Graph]
+* [Binary Search Tree](/src/main/java/dataStructures/tree/BinarySearchTree.java) 
+* [Binary Tree Node](/src/main/java/dataStructures/tree/BinaryTreeNode.java)
+* [LCRS Tree](/src/main/java/dataStructures/tree/LCRSTree.java) (Left Child Right Sibling)
+* [LCRS Node](/src/main/java/dataStructures/tree/LCRSNode.java) (Left Child Right Sibling)
+* [Singly Node](/src/main/java/dataStructures/linkedList/SinglyNode.java)
+* [Singly Sorted Linked List](/src/main/java/dataStructures/linkedList/SinglySortedLinkedList.java)
+* [Doubly Node](/src/main/java/dataStructures/linkedList/DoublyNode.java)
+* [Doubly Sorted Linked List](/src/main/java/dataStructures/linkedList/DoublySortedLinkedList.java)
+* [Doubly Unsorted Linked List](/src/main/java/dataStructures/linkedList/DoublyUnsortedLinkedList.java)
+* [Adjacency Matrix Graph](/src/main/java/dataStructures/graph/AdjacencyMatrixGraph.java)
 
 ### Dynamic Programming ###
-* Fibonacci Numbers
+* [Fibonacci Numbers]((/src/main/java/dataStructures/dynamicProgramming/fibonacciNumbers.java))
 
 
 
