@@ -18,19 +18,21 @@ Below you will find the list of algorithms implemented from scratch:
 
 ### Data Structures ###
 
-* Stack
-* Simple Node (Implementation of Node)
-* Direct Address Hash Table
-* Open Addressing Hash Table
-* Universal Hashing Hash Table
-* Binary Search Tree
-* Binary Tree Node
-* LCRS Tree (Left Child Right Sibling)
-* LCRS Node (Left Child Right Sibling)
-* Doubly Node
-* Doubly Sorted Linked List
-* Doubly Unsorted Linked List
-* Adjacency Matrix Graph
+* [Stack](/src/main/java/dataStructures/stack/Stack.java) (Interface)
+* [Array Stack](/src/main/java/dataStructures/stack/ArrayStack.java)
+* [Node](/src/main/java/dataStructures/Node.java) (Interface)
+* [Simple Node](/src/main/java/dataStructures/SimpleNode.java)
+* [Direct Address Hash Table](/src/main/java/hashTable/DirectAddressingHashTable.java)
+* [Open Addressing Hash Table](/src/main/java/hashTable/OpenAddressingHashTable.java)
+* [Universal Hashing Hash Table](/src/main/java/hashTable/UniversalHashingHashTable.java)
+* [Binary Search Tree]
+* [Binary Tree Node]
+* [LCRS Tree] (Left Child Right Sibling)
+* [LCRS Node] (Left Child Right Sibling)
+* [Doubly Node]
+* [Doubly Sorted Linked List]
+* [Doubly Unsorted Linked List]
+* [Adjacency Matrix Graph]
 
 ### Dynamic Programming ###
 * Fibonacci Numbers
