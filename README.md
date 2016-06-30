@@ -16,24 +16,38 @@ Below you will find the list of algorithms implemented from scratch:
 * [Selection Sort](/src/main/java/sorting/SelectionSort.java)
 * [Insertion Sort](/src/main/java/sorting/InsertionSort.java)
 
-### Data Structures ###
+### Stack ###
 
 * [Stack](/src/main/java/dataStructures/stack/Stack.java) (Interface)
 * [Array Stack](/src/main/java/dataStructures/stack/ArrayStack.java)
 * [Node](/src/main/java/dataStructures/Node.java) (Interface)
 * [Simple Node](/src/main/java/dataStructures/SimpleNode.java)
+
+### Hash Tables ###
+
 * [Direct Address Hash Table](/src/main/java/dataStructures/hashTable/DirectAddressHashTable.java)
 * [Open Addressing Hash Table](/src/main/java/dataStructures/hashTable/OpenAddressingHashTable.java)
-* [Universal Hashing Hash Table](/src/main/java/hashTable/UniversalHashingHashTable.java)
+* [Universal Hashing Hash Table](/src/main/java/dataStructures/hashTable/UniversalHashingHashTable.java)
+
+### Trees ###
+
 * [Binary Search Tree](/src/main/java/dataStructures/tree/BinarySearchTree.java) 
 * [Binary Tree Node](/src/main/java/dataStructures/tree/BinaryTreeNode.java)
 * [LCRS Tree](/src/main/java/dataStructures/tree/LCRSTree.java) (Left Child Right Sibling)
 * [LCRS Node](/src/main/java/dataStructures/tree/LCRSNode.java) (Left Child Right Sibling)
+
+### Linked Lists ###
+
 * [Singly Node](/src/main/java/dataStructures/linkedList/SinglyNode.java)
 * [Singly Sorted Linked List](/src/main/java/dataStructures/linkedList/SinglySortedLinkedList.java)
+* [Singly Unsorted Linked List](/src/main/java/dataStructures/linkedList/SinglyUnsortedLinkedList.java)
+* [Sentinels Doubly Unsorted Linked List](/src/main/java/dataStructures/linkedList/SentinelsDoublyUnsortedLinkedList.java)
 * [Doubly Node](/src/main/java/dataStructures/linkedList/DoublyNode.java)
 * [Doubly Sorted Linked List](/src/main/java/dataStructures/linkedList/DoublySortedLinkedList.java)
 * [Doubly Unsorted Linked List](/src/main/java/dataStructures/linkedList/DoublyUnsortedLinkedList.java)
+
+### Graphs ###
+
 * [Adjacency Matrix Graph](/src/main/java/dataStructures/graph/AdjacencyMatrixGraph.java)
 
 ### Dynamic Programming ###
