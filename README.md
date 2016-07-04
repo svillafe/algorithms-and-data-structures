@@ -15,6 +15,11 @@ Below you will find the list of algorithms implemented from scratch:
 * [Radix Sort](/src/main/java/sorting/RadixSort.java)
 * [Selection Sort](/src/main/java/sorting/SelectionSort.java)
 * [Insertion Sort](/src/main/java/sorting/InsertionSort.java)
+* [Quick Sort (Basic approach)](/src/main/java/sorting/quicksort/QuickSort.java)
+* [Quick Sort (Hoare's method)](/src/main/java/sorting/quicksort/HoareQuickSort.java)
+* [Quick Sort (Randomized version)](/src/main/java/sorting/quicksort/RandomQuickSort.java)
+* [Quick Sort (Tail recursive)](/src/main/java/sorting/quicksort/TailRecursiveQuickSort.java)
+* [Quick Sort (Median of three)](/src/main/java/sorting/quicksort/Median3QuickSort.java)
 
 ### Stack ###
 
