@@ -21,12 +21,24 @@ Below you will find the list of algorithms implemented from scratch:
 * [Quick Sort (Tail recursive)](/src/main/java/sorting/quicksort/TailRecursiveQuickSort.java)
 * [Quick Sort (Median of three)](/src/main/java/sorting/quicksort/Median3QuickSort.java)
 
+### Node ###
+
+* [Node](/src/main/java/dataStructures/Node.java) (Interface)
+* [Simple Node](/src/main/java/dataStructures/SimpleNode.java)
+
 ### Stack ###
 
 * [Stack](/src/main/java/dataStructures/stack/Stack.java) (Interface)
 * [Array Stack](/src/main/java/dataStructures/stack/ArrayStack.java)
-* [Node](/src/main/java/dataStructures/Node.java) (Interface)
-* [Simple Node](/src/main/java/dataStructures/SimpleNode.java)
+* [Queue Stack](/src/main/java/dataStructures/stack/QueueStack.java)
+* [Singly Unsorted Linked List Stack](/src/main/java/dataStructures/stack/SinglyUnsortedLinkedListStack.java)
+
+### Queue ###
+
+* [Queue](/src/main/java/dataStructures/queue/Queue.java) (Interface)
+* [Array Queue](/src/main/java/dataStructures/queue/ArrayQueue.java)
+* [Singly Unsorted Linked List Queue](/src/main/java/dataStructures/queue/SinglyUnsortedLinkedListQueue.java)
+* [Stack Queue](/src/main/java/dataStructures/queue/StackQueue.java)
 
 ### Hash Tables ###
 

@@ -80,8 +80,9 @@ public class SinglyUnsortedLinkedList<T extends Comparable<T>, U> implements Lin
 				if(node.getNext().getKey() == element.getKey()){
 					node.setNext(element.getNext());
 					exit = true;
+				}else{
+					node = node.getNext();
 				}
-				node = node.getNext();
 			}
 			//If the node to be deleted is the tail
 			if(element.getNext() == null){

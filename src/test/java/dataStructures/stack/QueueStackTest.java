@@ -1,22 +1,22 @@
 package dataStructures.stack;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.nio.BufferOverflowException;
 import java.nio.BufferUnderflowException;
 
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
 
 import dataStructures.SimpleNode;
-import dataStructures.stack.ArrayStack;
 
-public class ArrayStackTest {
-	
-	private ArrayStack<Integer, String> s = null;
+public class QueueStackTest {
+
+	private QueueStack<Integer, String> s = null;
 			
 	@Before
 	public void setUp() {
-		s = new ArrayStack<Integer, String>(6);
+		s = new QueueStack<Integer, String>(6);
 	}
 
 	@Test

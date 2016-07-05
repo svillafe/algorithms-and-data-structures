@@ -1,22 +1,21 @@
 package dataStructures.stack;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import java.nio.BufferOverflowException;
 import java.nio.BufferUnderflowException;
 
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
 
 import dataStructures.SimpleNode;
-import dataStructures.stack.ArrayStack;
 
-public class ArrayStackTest {
-	
-	private ArrayStack<Integer, String> s = null;
+public class SinglyUnsortedLinkedListStackTest {
+
+	private SinglyUnsortedLinkedListStack<Integer, String> s = null;
 			
 	@Before
 	public void setUp() {
-		s = new ArrayStack<Integer, String>(6);
+		s = new SinglyUnsortedLinkedListStack<Integer, String>();
 	}
 
 	@Test
@@ -46,7 +45,7 @@ public class ArrayStackTest {
 		assertEquals(s.isEmpty(), true);
 	}
 	
-	@Test(expected = BufferOverflowException.class)
+	@Test
 	public void stackShouldReturnWhenItIsFull() {
 		s.push(new SimpleNode<Integer, String>(1, "AW"));
 		s.push(new SimpleNode<Integer, String>(2, "AW"));
@@ -55,7 +54,7 @@ public class ArrayStackTest {
 		s.push(new SimpleNode<Integer, String>(5, "AW"));
 		s.push(new SimpleNode<Integer, String>(6, "AW"));
 		
-		assertEquals(true, s.isFull());
+		assertEquals(false, s.isFull());
 		s.push(new SimpleNode<Integer, String>(7, "AW"));
 	}
 }
