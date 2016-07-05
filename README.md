@@ -40,6 +40,11 @@ Below you will find the list of algorithms implemented from scratch:
 * [Singly Unsorted Linked List Queue](/src/main/java/dataStructures/queue/SinglyUnsortedLinkedListQueue.java)
 * [Stack Queue](/src/main/java/dataStructures/queue/StackQueue.java)
 
+### Deque (Double ended queue) ###
+
+* [Dequeue](/src/main/java/dataStructures/queue/Dequeue.java) (Interface)
+* [Array Dequeue](/src/main/java/dataStructures/queue/ArrayDeque.java)
+
 ### Hash Tables ###
 
 * [Direct Address Hash Table](/src/main/java/dataStructures/hashTable/DirectAddressHashTable.java)
