@@ -45,6 +45,13 @@ Below you will find the list of algorithms implemented from scratch:
 * [Deque](/src/main/java/dataStructures/queue/Deque.java) (Interface)
 * [Array Deque](/src/main/java/dataStructures/queue/ArrayDeque.java)
 
+### Heap ###
+
+* [Heap](/src/main/java/dataStructures/heap/Heap.java) (Interface)
+* [Mergeable Heap](/src/main/java/dataStructures/heap/mergeableHeap.java) (Interface)
+* [Array Heap](/src/main/java/dataStructures/heap/ArrayHeap.java)
+* [Doubly Sorted Linked List Mergeable Heap](/src/main/java/dataStructures/heap/DoublySortedLinkedListMergeableHeap.java)
+
 ### Hash Tables ###
 
 * [Direct Address Hash Table](/src/main/java/dataStructures/hashTable/DirectAddressHashTable.java)
