@@ -48,7 +48,7 @@ Below you will find the list of algorithms implemented from scratch:
 ### Heap ###
 
 * [Heap](/src/main/java/dataStructures/heap/Heap.java) (Interface)
-* [Mergeable Heap](/src/main/java/dataStructures/heap/mergeableHeap.java) (Interface)
+* [Mergeable Heap](/src/main/java/dataStructures/heap/MergeableHeap.java) (Interface)
 * [Array Heap](/src/main/java/dataStructures/heap/ArrayHeap.java)
 * [Doubly Sorted Linked List Mergeable Heap](/src/main/java/dataStructures/heap/DoublySortedLinkedListMergeableHeap.java)
 
