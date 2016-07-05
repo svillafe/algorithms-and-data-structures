@@ -42,8 +42,8 @@ Below you will find the list of algorithms implemented from scratch:
 
 ### Deque (Double ended queue) ###
 
-* [Dequeue](/src/main/java/dataStructures/queue/Dequeue.java) (Interface)
-* [Array Dequeue](/src/main/java/dataStructures/queue/ArrayDeque.java)
+* [Deque](/src/main/java/dataStructures/queue/Deque.java) (Interface)
+* [Array Deque](/src/main/java/dataStructures/queue/ArrayDeque.java)
 
 ### Hash Tables ###
 
