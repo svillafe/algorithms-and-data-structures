@@ -80,8 +80,11 @@ Below you will find the list of algorithms implemented from scratch:
 
 * [Adjacency Matrix Graph](/src/main/java/dataStructures/graph/AdjacencyMatrixGraph.java)
 
-### Dynamic Programming ###
-* [Fibonacci Numbers]((/src/main/java/dataStructures/dynamicProgramming/fibonacciNumbers.java))
+### Recursion & Dynamic Programming ###
+* [Fibonacci Numbers]((/src/main/java/dynamicProgramming/fibonacciNumbers.java))
+* [Nearest Knapsack]((/src/main/java/dynamicProgramming/NearestKnapsack.java))
+* [Eight Queens]((/src/main/java/dynamicProgramming/EightQueens.java))
+* [Red John is back]((/src/main/java/dynamicProgramming/RedJohnIsBack.java))
 
 
 
