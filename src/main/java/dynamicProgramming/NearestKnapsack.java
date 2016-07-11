@@ -5,7 +5,7 @@ package dynamicProgramming;
  * is as near as possible, but not exceeding, to the expected sum(k).
  * 
  * Notes:
- * - Each element of  can be selected multiple times.
+ * - Each element of the array can be selected multiple times.
  * - If no element is selected then the sum is 0. 
  */
 
