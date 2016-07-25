@@ -9,18 +9,24 @@ Below you will find the list of algorithms implemented from scratch:
 
 ### Sorting ###
 
-* [Bubble Sort](/src/main/java/sorting/BubbleSort.java)
-* [Bucket Sort](/src/main/java/sorting/BucketSort.java) 
-* [Counting Sort](/src/main/java/sorting/CountingSort.java)
-* [Merge Sort](/src/main/java/sorting/MergeSort.java)
-* [Radix Sort](/src/main/java/sorting/RadixSort.java)
-* [Selection Sort](/src/main/java/sorting/SelectionSort.java)
-* [Insertion Sort](/src/main/java/sorting/InsertionSort.java)
-* [Quick Sort (Basic approach)](/src/main/java/sorting/quicksort/QuickSort.java)
-* [Quick Sort (Hoare's method)](/src/main/java/sorting/quicksort/HoareQuickSort.java)
-* [Quick Sort (Randomized version)](/src/main/java/sorting/quicksort/RandomQuickSort.java)
-* [Quick Sort (Tail recursive)](/src/main/java/sorting/quicksort/TailRecursiveQuickSort.java)
-* [Quick Sort (Median of three)](/src/main/java/sorting/quicksort/Median3QuickSort.java)
+| Algorithm                                           | Worst Case Running Time | Average Case Running Time | Stable | In-Place
+|:---------------------------------------------------:|:-----------------------:|:-------------------------:|:------:|:-----------:|
+|[Bubble Sort](/src/main/java/sorting/BubbleSort.java)| O(n^2)                  |O(n^2) | Yes | Yes
+|[Bucket Sort](/src/main/java/sorting/BucketSort.java) | O(n^2)     |O(n + k)   | Yes | No 
+|[Counting Sort](/src/main/java/sorting/CountingSort.java)| O(n) |O(n) |Yes | No 
+|[Merge Sort](/src/main/java/sorting/MergeSort.java)| O(n log n)| O(n log n)| Yes | No |
+|[Radix Sort](/src/main/java/sorting/RadixSort.java)|О(n)|О(n)| Yes | No
+|[Selection Sort](/src/main/java/sorting/SelectionSort.java)| O(n^2) | O(n^2) | Yes |Yes 
+|[Insertion Sort](/src/main/java/sorting/InsertionSort.java)|O(n log n) | О(n^2) | Yes | Yes
+|[Quick Sort (Basic approach)](/src/main/java/sorting/quicksort/QuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
+|[Quick Sort (Hoare's method)](/src/main/java/sorting/quicksort/HoareQuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
+|[Quick Sort (Randomized version)](/src/main/java/sorting/quicksort/RandomQuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
+|[Quick Sort (Tail recursive)](/src/main/java/sorting/quicksort/TailRecursiveQuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
+|[Quick Sort (Median of three)](/src/main/java/sorting/quicksort/Median3QuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
+
+
+
+
 
 ### Node ###
 
