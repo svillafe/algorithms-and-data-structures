@@ -32,6 +32,8 @@ Below you will find the list of algorithms implemented from scratch:
 
 * [Node](/src/main/java/dataStructures/Node.java) (Interface)
 * [Simple Node](/src/main/java/dataStructures/SimpleNode.java)
+* [Singly Node](/src/main/java/dataStructures/linkedList/SinglyNode.java)
+* [Doubly Node](/src/main/java/dataStructures/linkedList/DoublyNode.java)
 
 ### Stack ###
 
@@ -74,13 +76,13 @@ Below you will find the list of algorithms implemented from scratch:
 
 ### Linked Lists ###
 
-* [Singly Node](/src/main/java/dataStructures/linkedList/SinglyNode.java)
-* [Singly Sorted Linked List](/src/main/java/dataStructures/linkedList/SinglySortedLinkedList.java)
-* [Singly Unsorted Linked List](/src/main/java/dataStructures/linkedList/SinglyUnsortedLinkedList.java)
-* [Sentinels Doubly Unsorted Linked List](/src/main/java/dataStructures/linkedList/SentinelsDoublyUnsortedLinkedList.java)
-* [Doubly Node](/src/main/java/dataStructures/linkedList/DoublyNode.java)
-* [Doubly Sorted Linked List](/src/main/java/dataStructures/linkedList/DoublySortedLinkedList.java)
-* [Doubly Unsorted Linked List](/src/main/java/dataStructures/linkedList/DoublyUnsortedLinkedList.java)
+| Implementation | Insert | Delete | Search | Minimum | Maximum
+|:--------------:|:------:|:------:|:------:|:-------:|:------:|
+| [Singly Sorted Linked List](/src/main/java/dataStructures/linkedList/SinglySortedLinkedList.java)| O(n) | O(n) | O(n) | O(1) | O(1)
+| [Singly Unsorted Linked List](/src/main/java/dataStructures/linkedList/SinglyUnsortedLinkedList.java)| O(1) | O(n) | O(n) | O(n) | O(n)
+| [Sentinels Doubly Unsorted Linked List](/src/main/java/dataStructures/linkedList/SentinelsDoublyUnsortedLinkedList.java)| O(1) | O(1) | O(n) | O(n) | O(n)
+| [Doubly Sorted Linked List](/src/main/java/dataStructures/linkedList/DoublySortedLinkedList.java)| O(n) | O(1) | O(n) | O(1) | O(n)
+| [Doubly Unsorted Linked List](/src/main/java/dataStructures/linkedList/DoublyUnsortedLinkedList.java)| O(1) | O(1) | O(n) | O(n) | O(n)
 
 ### Graphs ###
 
