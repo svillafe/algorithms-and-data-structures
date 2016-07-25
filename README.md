@@ -18,6 +18,7 @@ Below you will find the list of algorithms implemented from scratch:
 |[Radix Sort](/src/main/java/sorting/RadixSort.java)|О(n)|О(n)| Yes | No
 |[Selection Sort](/src/main/java/sorting/SelectionSort.java)| O(n^2) | O(n^2) | Yes |Yes 
 |[Insertion Sort](/src/main/java/sorting/InsertionSort.java)|O(n log n) | О(n^2) | Yes | Yes
+|[Heap Sort](/src/main/java/sorting/HeapSort.java)|O(n log n) | O(n log n)  | No | Yes
 |[Quick Sort (Basic approach)](/src/main/java/sorting/quicksort/QuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
 |[Quick Sort (Hoare's method)](/src/main/java/sorting/quicksort/HoareQuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
 |[Quick Sort (Randomized version)](/src/main/java/sorting/quicksort/RandomQuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
