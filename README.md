@@ -24,10 +24,6 @@ Below you will find the list of algorithms implemented from scratch:
 |[Quick Sort (Tail recursive)](/src/main/java/sorting/quicksort/TailRecursiveQuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
 |[Quick Sort (Median of three)](/src/main/java/sorting/quicksort/Median3QuickSort.java)|О(n^2) | O(n log n) |Yes | Yes
 
-
-
-
-
 ### Node ###
 
 * [Node](/src/main/java/dataStructures/Node.java) (Interface)
@@ -38,9 +34,12 @@ Below you will find the list of algorithms implemented from scratch:
 ### Stack ###
 
 * [Stack](/src/main/java/dataStructures/stack/Stack.java) (Interface)
-* [Array Stack](/src/main/java/dataStructures/stack/ArrayStack.java)
-* [Queue Stack](/src/main/java/dataStructures/stack/QueueStack.java)
-* [Singly Unsorted Linked List Stack](/src/main/java/dataStructures/stack/SinglyUnsortedLinkedListStack.java)
+
+| Implementation | push | pop | isFull | isEmpty 
+|:--------------:|:----:|:---:|:------:|:-------:|
+|[Array Stack](/src/main/java/dataStructures/stack/ArrayStack.java) | O(1) |  O(1) |  O(1) |  O(1) 
+|[Queue Stack](/src/main/java/dataStructures/stack/QueueStack.java) | O(1) | O(n)  | O(1)  | O(1)
+|[Singly Unsorted Linked List Stack](/src/main/java/dataStructures/stack/SinglyUnsortedLinkedListStack.java)| O(1) | O(1)  | O(1)  | O(1)
 
 ### Queue ###
 
@@ -76,7 +75,7 @@ Below you will find the list of algorithms implemented from scratch:
 
 ### Linked Lists ###
 
-| Implementation | Insert | Delete | Search | Minimum | Maximum
+| Implementation | insert | delete | search | minimum | maximum
 |:--------------:|:------:|:------:|:------:|:-------:|:------:|
 | [Singly Sorted Linked List](/src/main/java/dataStructures/linkedList/SinglySortedLinkedList.java)| O(n) | O(n) | O(n) | O(1) | O(1)
 | [Singly Unsorted Linked List](/src/main/java/dataStructures/linkedList/SinglyUnsortedLinkedList.java)| O(1) | O(n) | O(n) | O(n) | O(n)
