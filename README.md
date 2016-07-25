@@ -44,9 +44,12 @@ Below you will find the list of algorithms implemented from scratch:
 ### Queue ###
 
 * [Queue](/src/main/java/dataStructures/queue/Queue.java) (Interface)
-* [Array Queue](/src/main/java/dataStructures/queue/ArrayQueue.java)
-* [Singly Unsorted Linked List Queue](/src/main/java/dataStructures/queue/SinglyUnsortedLinkedListQueue.java)
-* [Stack Queue](/src/main/java/dataStructures/queue/StackQueue.java)
+ 
+| Implementation | enqueue | dequeue | isFull | isEmpty 
+|:--------------:|:-------:|:-------:|:------:|:-------:|
+|[Array Queue](/src/main/java/dataStructures/queue/ArrayQueue.java) | O(1) |  O(1) |  O(1) |  O(1) 
+|[Stack Queue](/src/main/java/dataStructures/queue/StackQueue.java) | O(1) | O(1)  | O(n)  | O(1)
+|[Singly Unsorted Linked List Queue](/src/main/java/dataStructures/queue/SinglyUnsortedLinkedListQueue.java)| O(1) | O(n)  | O(1)  | O(1)
 
 ### Deque (Double ended queue) ###
 
