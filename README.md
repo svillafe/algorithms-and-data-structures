@@ -7,16 +7,16 @@ The majority of the code here is based in the pseudo-code that belongs to the CL
 
 Below you will find a group of tables grouping algorithms and its running time which are expressed using Big-O annotation:
 
-#### A brief summary about Asymptotic Analysis####
+#### A brief summary about Asymptotic Analysis
 
 Asymptotic analysis is the language by which every computer programmer and computer scientist discusses the high level performance of computer algorithm. It provides basic vocabulary for discussing the design and analysis of algorithm. For example Big-O notation. It is sharp enough to make useful comparisons between different algorithms, especially on large inputs.
 
 When we say that a function T(n) is Big-Oh of f(n), it means that for all sufficiently large values 
 of n, it is bounded above by  constant multiple of f(n).
 
-#### f(n)'s relation #### 
+#### f(n)'s relation
 
-Constant Time = 1 < log log n < log n < n^(1/2) < n < n lg n < n^2 < n^3 < c ^ n (c > 1) < n!
+**1** < **log log n** < **log n** < **n^(1/2)** < **n** < **n lg n** < **n^2** < **n^3** < **c ^ n** (c > 1) < **n!**
 
 ### Sorting ###
 
