@@ -3,9 +3,20 @@
 [![Build Status](https://travis-ci.org/svillafe/algorithms-and-data-structures.svg?branch=master)](https://travis-ci.org/svillafe/algorithms-and-data-structures) [![Coverage Status](https://coveralls.io/repos/github/svillafe/algorithms-and-data-structures/badge.svg?branch=master)](https://coveralls.io/github/svillafe/algorithms-and-data-structures?branch=master)
 
 In this repository, you will find implementations of the most famous algorithms and data structures.
-The majority of the code here is based in the pseudo-code that belongs to the CLRS Book. In code's comments, you will find the page of the book where the pseudo-code is located.
+The majority of the code here is based in the pseudo-code that belongs to the CLRS Book and Skiena's The Algorithm Design Manual. In code's comments, you will find the page of the book where the pseudo-code is located.
 
-Below you will find the list of algorithms implemented from scratch:
+Below you will find a group of tables grouping algorithms and its running time which are expressed using Big-O annotation:
+
+#### A brief summary about Asymptotic Analysis####
+
+Asymptotic analysis is the language by which every computer programmer and computer scientist discusses the high level performance of computer algorithm. It provides basic vocabulary for discussing the design and analysis of algorithm. For example Big-O notation. It is sharp enough to make useful comparisons between different algorithms, especially on large inputs.
+
+When we say that a function T(n) is Big-Oh of f(n), it means that for all sufficiently large values 
+of n, it is bounded above by  constant multiple of f(n).
+
+#### f(n)'s relation #### 
+
+Constant Time = 1 < log log n < log n < n^(1/2) < n < n lg n < n^2 < n^3 < c ^ n (c > 1) < n!
 
 ### Sorting ###
 
@@ -93,7 +104,7 @@ Below you will find the list of algorithms implemented from scratch:
 
 * [Adjacency Matrix Graph](/src/main/java/dataStructures/graph/AdjacencyMatrixGraph.java)
 
-### Recursion & Dynamic Programming ###
+### Exercises and random problems ###
 * [Fibonacci Numbers](/src/main/java/dynamicProgramming/FibonacciNumbers.java)
 * [Nearest Knapsack](/src/main/java/dynamicProgramming/NearestKnapsack.java)
 * [Eight Queens](/src/main/java/dynamicProgramming/EightQueens.java)
