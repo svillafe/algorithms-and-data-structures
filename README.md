@@ -72,8 +72,10 @@ Below you will find the list of algorithms implemented from scratch:
 
 ### Trees ###
 
-* [Binary Search Tree](/src/main/java/dataStructures/tree/BinarySearchTree.java) 
-* [Binary Tree Node](/src/main/java/dataStructures/tree/BinaryTreeNode.java)
+* [Binary Search Tree (BST)](/src/main/java/dataStructures/tree/BST.java) 
+* [BSTNode](/src/main/java/dataStructures/tree/BSTNode.java)
+* [AVLTree](/src/main/java/dataStructures/tree/AVLTree.java) 
+* [AVLNode](/src/main/java/dataStructures/tree/AVLNode.java)
 * [LCRS Tree](/src/main/java/dataStructures/tree/LCRSTree.java) (Left Child Right Sibling)
 * [LCRS Node](/src/main/java/dataStructures/tree/LCRSNode.java) (Left Child Right Sibling)
 

@@ -1,10 +1,10 @@
-package convertToBaseProblems;
+package exercises;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import convertToBaseProblems.ConvertToNegabinary;
+import exercises.ConvertToNegabinary;
 
 public class ConvertToNegabinaryTest {
 	

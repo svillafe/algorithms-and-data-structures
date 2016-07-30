@@ -1,4 +1,4 @@
-package convertToBaseProblems;
+package exercises;
 
 /*
  * Input  : an integer number.

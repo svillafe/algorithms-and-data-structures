@@ -13,12 +13,12 @@ import dataStructures.stack.Stack;
  * 
  * Source: CLRS page 287
  */
-public class BinarySearchTree<T extends Comparable<T>, U> {
+public class BST<T extends Comparable<T>, U> {
 	
-	private BinaryTreeNode<T, U> root;
+	private BSTNode<T, U> root;
 	private Integer amountOfNodes;
 	
-	public BinarySearchTree(){
+	public BST(){
 		super();
 		this.root = null;
 		this.amountOfNodes = 0;
@@ -30,9 +30,9 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	 */
 	public void insert(T key, U data){
 		
-		BinaryTreeNode<T, U> parent  = null;
-		BinaryTreeNode<T, U> node    = this.root;
-		BinaryTreeNode<T, U> newNode = new BinaryTreeNode<T, U>(key, data);
+		BSTNode<T, U> parent  = null;
+		BSTNode<T, U> node    = this.root;
+		BSTNode<T, U> newNode = new BSTNode<T, U>(key, data);
 		
 		this.amountOfNodes++;
 		
@@ -58,13 +58,13 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 
 	public void insertRecursively(T key, U data){
 		if(this.root == null){
-			this.root = new BinaryTreeNode<T, U>(key, data);
+			this.root = new BSTNode<T, U>(key, data);
 		}else{
-			insertIntoTree(this.root, new BinaryTreeNode<T,U>(key, data));
+			insertIntoTree(this.root, new BSTNode<T,U>(key, data));
 		}
 	}
 	
-	private void insertIntoTree(BinaryTreeNode<T, U> node, BinaryTreeNode<T, U> newNode) {
+	private void insertIntoTree(BSTNode<T, U> node, BSTNode<T, U> newNode) {
 		if(newNode.getKey().compareTo(node.getKey()) < 0){
 			if(node.getLeft() == null){
 				newNode.setParent(node);
@@ -83,12 +83,12 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	}
 	
 
-	public BinaryTreeNode<T, U> searchRecursively(T key){
-		BinaryTreeNode<T, U> resp = searchRecursively(this.root, key);
+	public BSTNode<T, U> searchRecursively(T key){
+		BSTNode<T, U> resp = searchRecursively(this.root, key);
 		return resp;
 	}
 	
-	private BinaryTreeNode<T, U> searchRecursively(BinaryTreeNode<T, U> node, T key){
+	private BSTNode<T, U> searchRecursively(BSTNode<T, U> node, T key){
 		if(node == null || node.getKey() == key){
 			return node;
 		}
@@ -100,9 +100,9 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		}
 	}
 	
-	public BinaryTreeNode<T, U> searchIteratively(T key){
+	public BSTNode<T, U> searchIteratively(T key){
 		
-		BinaryTreeNode<T, U> node = this.root;
+		BSTNode<T, U> node = this.root;
 		
 		while(node != null && node.getKey() != key){
 			if(key.compareTo(node.getKey()) < 0){
@@ -115,7 +115,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		return node;
 	}
 	
-	public BinaryTreeNode<T, U> findMaximumRecursively() {
+	public BSTNode<T, U> findMaximumRecursively() {
 		if(this.root == null){
 			return null;
 		}
@@ -124,7 +124,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	}
 	
 	
-	private BinaryTreeNode<T, U> findMaximumRecursively(BinaryTreeNode<T, U> node) {
+	private BSTNode<T, U> findMaximumRecursively(BSTNode<T, U> node) {
 		if(node.getRight() == null){
 			return node;
 		}else{
@@ -132,8 +132,8 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		}
 	}
 	
-	public BinaryTreeNode<T, U> findMaximumIteratively() {
-		BinaryTreeNode<T, U> node = this.root;		
+	public BSTNode<T, U> findMaximumIteratively() {
+		BSTNode<T, U> node = this.root;		
 		if(node == null){
 			return null;
 		}
@@ -145,7 +145,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	}
 	
 	
-	public BinaryTreeNode<T, U> findMinimumRecursively() {
+	public BSTNode<T, U> findMinimumRecursively() {
 		if(this.root == null){
 			return null;
 		}
@@ -154,7 +154,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	}
 	
 	
-	private BinaryTreeNode<T, U> findMinimumRecursively(BinaryTreeNode<T, U> node) {
+	private BSTNode<T, U> findMinimumRecursively(BSTNode<T, U> node) {
 		if(node.getLeft() == null){
 			return node;
 		}else{
@@ -162,8 +162,8 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		}
 	}
 	
-	public BinaryTreeNode<T, U> findMinimumIteratively() {
-		BinaryTreeNode<T, U> node = this.root;		
+	public BSTNode<T, U> findMinimumIteratively() {
+		BSTNode<T, U> node = this.root;		
 		if(node == null){
 			return null;
 		}
@@ -180,7 +180,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		s.push(this.root);
 		
 		while(!s.isEmpty()){
-			BinaryTreeNode<T, U> node = (BinaryTreeNode<T, U>) s.pop();
+			BSTNode<T, U> node = (BSTNode<T, U>) s.pop();
 			System.out.println(node.getKey());
 			if(node.getLeft() != null){
 				s.push(node.getLeft());
@@ -214,7 +214,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		return resp;
 	}
 
-	private Integer doInOrderRecursively(BinaryTreeNode<T, U> node,T[] resp, Integer index) {
+	private Integer doInOrderRecursively(BSTNode<T, U> node,T[] resp, Integer index) {
 		if(node == null){
 			return index;
 		}
@@ -232,7 +232,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		return resp;
 	}
 
-	private Integer doPreOrderRecursively(BinaryTreeNode<T, U> node, T[] resp, Integer index) {
+	private Integer doPreOrderRecursively(BSTNode<T, U> node, T[] resp, Integer index) {
 		if(node == null){
 			return index;
 		}
@@ -252,7 +252,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 		return resp;
 	}
 
-	private Integer  doPostOrderRecursively(BinaryTreeNode<T, U> node, T[] resp, Integer index) {
+	private Integer  doPostOrderRecursively(BSTNode<T, U> node, T[] resp, Integer index) {
 		if(node == null){
 			return index;
 		}
@@ -271,8 +271,8 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	 * Every node is its own ancestor.
 	 * 
 	 */
-	public BinaryTreeNode<T, U> successor(BinaryTreeNode<T, U> node){
-		BinaryTreeNode<T, U> parent = null;
+	public BSTNode<T, U> successor(BSTNode<T, U> node){
+		BSTNode<T, U> parent = null;
 		
 		if(node.getRight() != null){
 			return this.findMinimumRecursively(node.getRight());
@@ -295,8 +295,8 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	 * node is its own ancestor. 
 	 * 
 	 */
-	public BinaryTreeNode<T, U> predecessor(BinaryTreeNode<T, U> node){
-		BinaryTreeNode<T, U> parent = null;
+	public BSTNode<T, U> predecessor(BSTNode<T, U> node){
+		BSTNode<T, U> parent = null;
 		
 		if(node.getLeft() != null){
 			return this.findMaximumRecursively(node.getLeft());
@@ -321,7 +321,7 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	 *  
 	 *  Source: CLRS page 296
 	 */
-	private void transplant(BinaryTreeNode<T, U> rootA, BinaryTreeNode<T, U> rootB){
+	private void transplant(BSTNode<T, U> rootA, BSTNode<T, U> rootB){
 		if(rootA.getParent() == null){
 			this.root = rootB;
 		}else if(rootA == rootA.getParent().getLeft()){
@@ -353,13 +353,13 @@ public class BinarySearchTree<T extends Comparable<T>, U> {
 	 * 
 	 * Source: CLRS page 296.
 	 */
-	public void delete(BinaryTreeNode<T, U> node){
+	public void delete(BSTNode<T, U> node){
 		if(node.getLeft() == null){
 			this.transplant(node, node.getRight());
 		}else if(node.getRight() == null){
 			this.transplant(node, node.getLeft());
 		}else{
-			BinaryTreeNode<T, U> minimum = this.findMinimumRecursively(node.getRight());
+			BSTNode<T, U> minimum = this.findMinimumRecursively(node.getRight());
 			if(minimum.getParent() != node){
 				this.transplant(minimum, minimum.getRight());
 				minimum.setRight(node.getRight());

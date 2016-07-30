@@ -2,15 +2,15 @@ package dataStructures.tree;
 
 import dataStructures.Node;
 
-public class BinaryTreeNode< T extends Comparable<T>, U> implements Node<T, U> {
+public class BSTNode< T extends Comparable<T>, U> implements Node<T, U> {
 	
 	private T key;
 	private U data;
-	private BinaryTreeNode<T, U> parent;
-	private BinaryTreeNode<T, U> left;
-	private BinaryTreeNode<T, U> right;
+	private BSTNode<T, U> parent;
+	private BSTNode<T, U> left;
+	private BSTNode<T, U> right;
 	
-	public BinaryTreeNode(T key, U data) {
+	public BSTNode(T key, U data) {
 		super();
 		this.key    = key;
 		this.data   = data;
@@ -40,29 +40,29 @@ public class BinaryTreeNode< T extends Comparable<T>, U> implements Node<T, U> {
 	}
 	
 	
-	public BinaryTreeNode<T, U> getParent() {
+	public BSTNode<T, U> getParent() {
 		return parent;
 	}
 
-	public void setParent(BinaryTreeNode<T, U> parent) {
+	public void setParent(BSTNode<T, U> parent) {
 		this.parent = parent;
 	}
 
 	
 
-	public BinaryTreeNode<T, U> getLeft() {
+	public BSTNode<T, U> getLeft() {
 		return left;
 	}
 	
-	public void setLeft(BinaryTreeNode<T, U> left) {
+	public void setLeft(BSTNode<T, U> left) {
 		this.left = left;
 	}
 	
-	public BinaryTreeNode<T, U> getRight() {
+	public BSTNode<T, U> getRight() {
 		return right;
 	}
 	
-	public void setRight(BinaryTreeNode<T, U> right) {
+	public void setRight(BSTNode<T, U> right) {
 		this.right = right;
 	}
 }

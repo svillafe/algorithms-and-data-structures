@@ -6,13 +6,13 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class BinarySearchTreeTest {
+public class BSTTest {
 	
-	private BinarySearchTree<Integer, String> tree = null;
+	private BST<Integer, String> tree = null;
 	
 	@Before
 	public void setUp() {
-		this.tree = new BinarySearchTree<Integer, String>();
+		this.tree = new BST<Integer, String>();
 		loadTree();
 	}
 	
@@ -66,9 +66,9 @@ public class BinarySearchTreeTest {
 	
 	@Test
 	public void itShouldFindTheSuccessor(){
-		BinaryTreeNode<Integer, String> node1 = this.tree.searchIteratively(8);
-		BinaryTreeNode<Integer, String> node2 = this.tree.searchIteratively(2);
-		BinaryTreeNode<Integer, String> node3 = this.tree.searchIteratively(6);
+		BSTNode<Integer, String> node1 = this.tree.searchIteratively(8);
+		BSTNode<Integer, String> node2 = this.tree.searchIteratively(2);
+		BSTNode<Integer, String> node3 = this.tree.searchIteratively(6);
 
 		assertEquals(null, this.tree.successor(node1));
 		assertEquals("AF", this.tree.successor(node2).getData());
@@ -77,9 +77,9 @@ public class BinarySearchTreeTest {
 	
 	@Test
 	public void itShouldFindThePredecessor(){
-		BinaryTreeNode<Integer, String> node1 = this.tree.searchIteratively(1);
-		BinaryTreeNode<Integer, String> node2 = this.tree.searchIteratively(2);
-		BinaryTreeNode<Integer, String> node3 = this.tree.searchIteratively(6);
+		BSTNode<Integer, String> node1 = this.tree.searchIteratively(1);
+		BSTNode<Integer, String> node2 = this.tree.searchIteratively(2);
+		BSTNode<Integer, String> node3 = this.tree.searchIteratively(6);
 
 		assertEquals(null, this.tree.predecessor(node1));
 		assertEquals("AE", this.tree.predecessor(node2).getData());
@@ -88,11 +88,11 @@ public class BinarySearchTreeTest {
 	
 	@Test
 	public void itShouldDeleteNodesCorrectlyCase1(){
-		BinaryTreeNode<Integer, String> node = this.tree.searchRecursively(7);		
+		BSTNode<Integer, String> node = this.tree.searchRecursively(7);		
 		this.tree.delete(node);
 		
-		BinaryTreeNode<Integer, String> node1 = this.tree.searchRecursively(8);
-		BinaryTreeNode<Integer, String> node2 = this.tree.searchRecursively(6);
+		BSTNode<Integer, String> node1 = this.tree.searchRecursively(8);
+		BSTNode<Integer, String> node2 = this.tree.searchRecursively(6);
 		
 		assertEquals(true, node1 == node2.getRight());
 	}
@@ -100,22 +100,22 @@ public class BinarySearchTreeTest {
 	@Test
 	public void itShouldDeleteNodesCorrectlyCase2(){
 		this.tree.insert(4, "AW");
-		BinaryTreeNode<Integer, String> node = this.tree.searchRecursively(5);		
+		BSTNode<Integer, String> node = this.tree.searchRecursively(5);		
 		this.tree.delete(node);
 		
-		BinaryTreeNode<Integer, String> node1 = this.tree.searchRecursively(4);
-		BinaryTreeNode<Integer, String> node2 = this.tree.searchRecursively(2);
+		BSTNode<Integer, String> node1 = this.tree.searchRecursively(4);
+		BSTNode<Integer, String> node2 = this.tree.searchRecursively(2);
 		
 		assertEquals(true, node1 == node2.getRight());
 	}
 	
 	@Test
 	public void itShouldDeleteNodesCorrectlyCase3(){
-		BinaryTreeNode<Integer, String> node = this.tree.searchRecursively(6);		
+		BSTNode<Integer, String> node = this.tree.searchRecursively(6);		
 		this.tree.delete(node);
 		
-		BinaryTreeNode<Integer, String> node1 = this.tree.searchRecursively(8);
-		BinaryTreeNode<Integer, String> node2 = this.tree.searchRecursively(7);
+		BSTNode<Integer, String> node1 = this.tree.searchRecursively(8);
+		BSTNode<Integer, String> node2 = this.tree.searchRecursively(7);
 		
 		assertEquals(true, node1 == node2.getRight());
 	}

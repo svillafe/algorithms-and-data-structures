@@ -1,4 +1,4 @@
-package convertToBaseProblems;
+package exercises;
 
 import java.util.Arrays;
 

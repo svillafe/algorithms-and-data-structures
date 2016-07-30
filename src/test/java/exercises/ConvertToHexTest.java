@@ -1,10 +1,10 @@
-package convertToBaseProblems;
+package exercises;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import convertToBaseProblems.ConvertToHex;
+import exercises.ConvertToHex;
 
 public class ConvertToHexTest {
 	

@@ -5,13 +5,13 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class BinaryTreeNodeTest {
+public class BSTNodeTest {
 	
-	private BinaryTreeNode<Integer, String> binaryTreeNode = null;
+	private BSTNode<Integer, String> binaryTreeNode = null;
 	
 	@Before
 	public void setUp() {
-		this.binaryTreeNode = new BinaryTreeNode<Integer, String>(5, "Hello World");
+		this.binaryTreeNode = new BSTNode<Integer, String>(5, "Hello World");
 	}
 	
 	@Test
