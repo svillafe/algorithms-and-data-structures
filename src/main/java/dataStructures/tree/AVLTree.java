@@ -98,13 +98,13 @@ public class AVLTree<T extends Comparable<T>, U> {
 		}
 	}
 
-	//    oldRoot 							newRoot
+	//              oldRoot 		         newRoot
 	//		/   \                           /       \
-    //     A    newRoot      ==>         oldRoot     C       
+        //             A    newRoot      ==>         oldRoot     C       
 	//		     /   \                   /     \    /  \
 	// 		     B     C                A       B  D    E
-	//                / \
-	//               D   E
+	//                        / \
+	//                       D   E
 	private AVLNode<T, U> rotateLeft(AVLNode<T, U> oldRoot) {
 		AVLNode<T, U> newRoot = oldRoot.getRight();
 		
@@ -138,13 +138,13 @@ public class AVLTree<T extends Comparable<T>, U> {
 		return;
 	}
 	
-	//    oldRoot 							newRoot
-	//		/   \                           /     \
-    // newRoot     A      ==>              B      oldRoot       
-	//	 /   \                   		/    \    /  \
-	//  B     C                        D      E  C    A
-	// / \
-	//D   E
+	//              oldRoot 		       newRoot
+	//	       /   \                           /     \
+        //       newRoot     A      ==>               B      oldRoot       
+	//	 /   \                   	     / \    /  \
+	//       B     C                            D  E   C    A
+	//      / \
+	//     D   E
 	private AVLNode<T, U> rotateRight(AVLNode<T, U> oldRoot) {
 		AVLNode<T, U> newRoot = oldRoot.getLeft();
 		
@@ -170,25 +170,25 @@ public class AVLTree<T extends Comparable<T>, U> {
 		return newRoot;
 	}
 	
-	//        A 			   A		            D
-	//		/   \            /  \                 /   \
-    // 	   B     C      ==> B    D        ==>    A      C        
-	//	 	    / \             /  \            / \    / \
+	//        A 	          A		        D
+	//	/   \            /  \                 /   \
+        //     B     C      ==> B    D        ==>    A      C        
+	//	    / \             /  \            / \    / \
 	//         D    E          F     C          B  F  G   E 
-	//        / \ 				    / \			   
-	//       F   G				   G   E
+	//        / \ 	                / \			   
+	//       F   G	               G   E
 	private AVLNode<T, U> doubleRotateRightLeft(AVLNode<T, U> node) {
 		  node.setRight(rotateRight(node.getRight()));
 		  return rotateLeft(node);
 	}
 	
-	//        A 				    A               E
+	//                A                     A               E
 	//		/   \                 /  \             /  \
-    //     B     C      ==>      E     C  ==>     B     A       
-	//	 /   \                 /   \             / \   / \
-	//  D     E               B      G           D  F  G  C
-	//       / \             /  \         
-	//      F   G           D    F
+        //             B     C      ==>      E     C  ==>     B     A       
+	//	      / \                   /  \             / \   / \
+	//  	     D   E                 B    G           D   F  G  C
+	//              / \              /  \         
+	//             F   G            D    F
 	private AVLNode<T, U> doubleRotateLeftRight(AVLNode<T, U> node) {
 		node.setLeft(rotateLeft(node.getLeft()));
 		return rotateRight(node);
