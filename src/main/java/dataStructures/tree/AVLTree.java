@@ -59,17 +59,31 @@ public class AVLTree<T extends Comparable<T>, U> {
 			parent.setRight(newNode);
 		}
 		computeHeights(newNode);
-		this.balanceTree(parent, key);
+		this.balanceTree(parent);
 	}
 
-	private void computeHeights(AVLNode<T, U> node) {
+	private void computeHeightsToRoot(AVLNode<T, U> node) {
 		while(node != null){
 			computeHeightNode(node);
 			node = node.getParent();
 		}
 	}
+	
+	private void computeHeightsToLeaves(AVLNode<T, U> node) {
+		if(node == null){
+			return;
+		}
+		computeHeightsToLeaves(node.getLeft());
+		computeHeightsToLeaves(node.getRight());
+		computeHeightNode(node);
+	}
+	
+	private void computeHeights(AVLNode<T, U> node){
+		computeHeightsToLeaves(node);
+		computeHeightsToRoot(node);
+	}
 
-	private void balanceTree(AVLNode<T, U> node, T key) {
+	private void balanceTree(AVLNode<T, U> node) {
 		
 		while(node != null){
 			
@@ -126,7 +140,7 @@ public class AVLTree<T extends Comparable<T>, U> {
 			}
 		}
 		
-		computeHeights(oldRoot);
+		computeHeightsToRoot(oldRoot);
 		return newRoot;
 	}
 	
@@ -138,13 +152,13 @@ public class AVLTree<T extends Comparable<T>, U> {
 		return;
 	}
 	
-	//              oldRoot 		       newRoot
-	//	       /   \                           /     \
-        //       newRoot     A      ==>               B      oldRoot       
+	//		oldRoot							newRoot
+	//		/	\                           /     \
+	//	newRoot	 A      ==>               B      oldRoot       
 	//	 /   \                   	     / \    /  \
-	//       B     C                            D  E   C    A
-	//      / \
-	//     D   E
+	//	B	 C							D  E   C    A
+	//		/ \
+	//		D	E
 	private AVLNode<T, U> rotateRight(AVLNode<T, U> oldRoot) {
 		AVLNode<T, U> newRoot = oldRoot.getLeft();
 		
@@ -166,7 +180,7 @@ public class AVLTree<T extends Comparable<T>, U> {
 			}
 		}
 		
-		computeHeights(oldRoot);
+		computeHeightsToRoot(oldRoot);
 		return newRoot;
 	}
 	
@@ -182,9 +196,9 @@ public class AVLTree<T extends Comparable<T>, U> {
 		  return rotateLeft(node);
 	}
 	
-	//                A                     A               E
+	//		  A                     A               E
 	//		/   \                 /  \             /  \
-        //             B     C      ==>      E     C  ==>     B     A       
+	//	   B     C      ==>      E     C  ==>     B     A       
 	//	      / \                   /  \             / \   / \
 	//  	     D   E                 B    G           D   F  G  C
 	//              / \              /  \         
@@ -210,6 +224,111 @@ public class AVLTree<T extends Comparable<T>, U> {
 		return node;
 	}
 	
+
+
+	/*
+	 * Remove
+	 */
+	public void remove(T key){
+		AVLNode<T, U> node = this.root;
+		Boolean found = false;
+		
+		while(node != null && !found){
+			if(key.compareTo(node.getKey()) < 0){
+				node = node.getLeft();
+			}else if(key.compareTo(node.getKey()) > 0){
+				node = node.getRight();
+			}else{
+				found = true;
+				removeNode(node);
+			}
+		}
+	}
+	
+	/*
+	 * Method: removeNode
+	 * Description: In order to delete a node there are several cases to bear
+	 * in mind: 
+	 * 		* If z (node to be deleted) has no left child, then we replace z by
+	 * 		its right child.
+	 * 		* If z has just one child, which is its left child, then we replace
+	 * 		z by its left child.
+	 * 		* Otherwise, z has both a left and right child. We find z's successor
+	 * 		which lies in z's right subtree and has no left child.
+	 * 			- If the minimum is z's right child, then we replace z by the minimum
+	 * 			leaving minimum's right child alone.
+	 * 			- Otherwise, the minimum lies within the z's right subtree but is not
+	 * 			z's right child. Thus, we first replace the minimum by its own right 
+	 * 			child, and then we replace z by the minimum.
+	 * 
+	 * Source: CLRS page 296.
+	 */
+	private void removeNode(AVLNode<T, U> node){
+		AVLNode<T, U> newNode = null;
+		
+		if(node.getLeft() == null && node.getRight() == null){
+			//If the node is a leaf, I delete it and I recompute 
+			//the heights and check the balance starting from its parent
+			newNode = node.getParent();
+			this.transplant(node, null);
+		}else if(node.getLeft() == null){
+			newNode = node.getRight();
+			this.transplant(node, newNode);
+		}else if(node.getRight() == null){
+			newNode = node.getLeft();
+			this.transplant(node, newNode);
+		}else{
+			newNode = getMinimum(node.getRight());
+			if(newNode.getParent() != node){
+				this.transplant(newNode, newNode.getRight());
+				newNode.setRight(node.getRight());
+				newNode.getRight().setParent(newNode);
+			}
+			this.transplant(node, newNode);
+			newNode.setLeft(node.getLeft());
+			newNode.getLeft().setParent(newNode);
+		}
+		computeHeights(newNode);
+		balanceTree(newNode);
+	}
+	
+	/*
+	 * Method: Transplant
+	 * Description: It helps to move subtrees around within the binary search tree by
+	 * replacing one subtree as a child of its parent with another subtree.
+	 * It replace the subtree rooted at node rootA with the subtree rooted at node 
+	 * rootB.
+	 *  
+	 *  Source: CLRS page 296
+	 */
+	private void transplant(AVLNode<T, U> rootA, AVLNode<T, U> rootB){
+		if(rootA.getParent() == null){
+			//RootA is the root of the tree.
+			this.root = rootB;
+		}else if(rootA == rootA.getParent().getLeft()){
+			//RootA is a Left Child.
+			rootA.getParent().setLeft(rootB);
+		}else{
+			//RootA is a Left Child.
+			rootA.getParent().setRight(rootB);
+		}
+		
+		if(rootB != null){
+			//Set the rootB's parent with 
+			//rootA's parent
+			rootB.setParent(rootA.getParent());
+		}
+		
+		
+	}
+	
+	private AVLNode<T, U> getMinimum(AVLNode<T, U> node) {
+		while(node.getLeft() != null){
+			node = node.getLeft();
+		}
+		return node;
+	}
+
 	public AVLNode<T, U> findMaximum() {
 		AVLNode<T, U> node = this.root;		
 		if(node == null){

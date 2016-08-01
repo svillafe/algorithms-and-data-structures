@@ -105,8 +105,7 @@ public class AVLTreeTest {
 		assertEquals(null, this.tree.search(9).getRight());
 		assertEquals(null, this.tree.search(9).getLeft());
 	}
-	
-	
+		
 	@Test							  
 	public void itShouldInsertCorrecltyDoubleRotateLeftRight(){
 		this.tree.insert(8, "A");
@@ -163,20 +162,73 @@ public class AVLTreeTest {
 		
 		assertEquals("C", this.tree.findMaximum().getData());
 	}
-
+	
+	@Test
+	public void itShouldDeleteCorrectlyCase1(){
+		this.tree.insert(3, "A");
+		this.tree.insert(1, "B");
+		this.tree.insert(8, "C");
+		this.tree.insert(5, "D");
+		this.tree.insert(9, "E");
+		this.tree.insert(4, "F");
+		this.tree.insert(6, "G");
+		
+		assertEquals(new Integer(4), this.tree.search(3).getRight().getKey());
+		this.tree.remove(4);
+		assertEquals(null, this.tree.search(4));
+		assertEquals(null, this.tree.search(3).getRight());
+		assertEquals(new Integer(1), this.tree.search(3).getLeft().getKey());
+		assertEquals(new Integer(5), this.tree.search(3).getParent().getKey());
+		assertEquals(new Integer(3), this.tree.getRoot().getHeight());
+	}
+	
+	@Test
+	public void itShouldDeleteCorrectlyCase2(){
+		this.tree.insert(5, "A");
+		this.tree.insert(3, "B");
+		this.tree.insert(8, "C");
+		this.tree.insert(9, "E");
+		
+		assertEquals(new Integer(3), this.tree.getRoot().getHeight());
+		this.tree.remove(8);
+		assertEquals(new Integer(2), this.tree.getRoot().getHeight());
+		assertEquals(null, this.tree.search(8));
+		assertEquals(null, this.tree.search(9).getLeft());
+	}
+	
+	@Test
+	public void itShouldDeleteCorrectlyCase3(){
+		this.tree.insert(5, "A");
+		this.tree.insert(2, "B");
+		this.tree.insert(9, "C");
+		this.tree.insert(1, "D");
+		this.tree.insert(8, "E");
+		this.tree.insert(11, "F");
+		this.tree.insert(10, "G");
+		this.tree.insert(12, "H");
+		
+		assertEquals(new Integer(4), this.tree.getRoot().getHeight());
+		this.tree.remove(1);
+		assertEquals(new Integer(9), this.tree.getRoot().getKey());
+		assertEquals(new Integer(8), this.tree.search(5).getRight().getKey());
+	}
+	
+	@Test
+	public void itShouldDeleteCorrectlyCase4(){
+		this.tree.insert(5, "A");
+		this.tree.insert(2, "B");
+		this.tree.insert(9, "C");
+		this.tree.insert(1, "E");
+		this.tree.insert(3, "E");
+		
+		assertEquals(new Integer(3), this.tree.getRoot().getHeight());
+		this.tree.remove(5);
+		assertEquals(new Integer(2), this.tree.getRoot().getKey());
+		assertEquals(new Integer(9), this.tree.getRoot().getRight().getKey());
+		assertEquals(new Integer(3), this.tree.getRoot().getRight().getLeft().getKey());
+		assertEquals(new Integer(1), this.tree.getRoot().getLeft().getKey());
+		assertEquals(new Integer(2), this.tree.getRoot().getKey());
+		assertEquals(new Integer(3), this.tree.getRoot().getHeight());
+	}
 }
-
-
-
-
-
-
-
-	
-
-	
-	
-	
-	
-
 
