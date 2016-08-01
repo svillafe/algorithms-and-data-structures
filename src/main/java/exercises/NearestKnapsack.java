@@ -1,4 +1,4 @@
-package dynamicProgramming;
+package exercises;
 /*
  * Given a list of  integers, {a1, a2, a3, ... an}, and another integer, k representing 
  * the expected sum. Select zero or more numbers from such that the sum of these numbers 

@@ -1,9 +1,5 @@
 package exercises;
 
-import java.util.Arrays;
-
-
-
 public class CountSmallerElements {
 	
 	public static Integer[] countSmallerElements(Integer [] array){
@@ -12,7 +8,6 @@ public class CountSmallerElements {
 		for(int i = array.length-1 ; i >= 0 ; i--){
 			tree.insert(array[i],"", counter, i);
 		}
-		System.out.println(Arrays.toString(counter));
 		return counter;
 	}
 	

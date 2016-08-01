@@ -1,4 +1,4 @@
-package dynamicProgramming;
+package exercises;
 
 import static org.junit.Assert.assertEquals;
 

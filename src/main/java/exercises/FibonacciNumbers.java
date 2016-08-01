@@ -1,4 +1,4 @@
-package dynamicProgramming;
+package exercises;
 
 /*
  * This class shows different approaches on solving the Fibonacci Numbers problem.

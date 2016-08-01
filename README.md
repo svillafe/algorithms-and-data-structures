@@ -105,10 +105,11 @@ of n, it is bounded above by  constant multiple of f(n).
 * [Adjacency Matrix Graph](/src/main/java/dataStructures/graph/AdjacencyMatrixGraph.java)
 
 ### Exercises and random problems ###
-* [Fibonacci Numbers](/src/main/java/dynamicProgramming/FibonacciNumbers.java)
-* [Nearest Knapsack](/src/main/java/dynamicProgramming/NearestKnapsack.java)
-* [Eight Queens](/src/main/java/dynamicProgramming/EightQueens.java)
-* [Red John is back](/src/main/java/dynamicProgramming/RedJohnIsBack.java)
+* [Fibonacci Numbers](/src/main/java/exercises/FibonacciNumbers.java)
+* [Nearest Knapsack](/src/main/java/exercises/NearestKnapsack.java)
+* [Eight Queens](/src/main/java/exercises/EightQueens.java)
+* [Red John is back](/src/main/java/exercises/RedJohnIsBack.java)
+* [Count Smaller Elements](/src/main/java/exercises/CountSmallerElements.java)
 
 
 
