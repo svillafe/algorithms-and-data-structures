@@ -6,10 +6,6 @@ import java.util.Arrays;
 
 public class CountSmallerElements {
 	
-	public static void main(String args[]){
-		countSmallerElements(new Integer[]{12,1,2,3,0,11,4});
-	}
-	
 	public static Integer[] countSmallerElements(Integer [] array){
 		CustomBST tree = new CustomBST();
 		Integer counter[] = new Integer[array.length];
